@@ -46,6 +46,17 @@ public class BernoulliValem implements Arvutatav {
         return lugeja / nimetaja;
     }
 
+    @Override
+    public void näide() {
+        setP(Math.random());
+        setN((int) Math.round(3 + Math.random() * 12));
+        setK((int) Math.round(Math.random() * n));
+        double tõenäosus = kombinatsioonid(k, n) * Math.pow(p, k) * Math.pow((1 - p), (n - k));
+
+        System.out.println("Näide:\nKui toimub n=" + n + " katset, kus mingi sündmuse toimumise tõenäosus igal katsel on p=" + Math.round(p*100)/100.0 +
+                " siis tõenäosus, et sündmus toimub täpselt k=" + k + " katsel, on P=" + Math.round(tõenäosus*100)/100.0);
+    }
+
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");

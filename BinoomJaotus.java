@@ -19,6 +19,19 @@ public class BinoomJaotus implements Arvutatav {
     }
 
     @Override
+    public void näide() {
+        setP(Math.random());
+        setN((int) Math.round(3 + Math.random() * 12));
+        double keskväärtus = n * p;
+        double dispersioon = (n * p) * (1 - p);
+        double standardhälve = Math.sqrt(dispersioon);
+
+        System.out.println("Näide\nKui juhuslik suurus X on binoomjaotusega parameetritega p=" + Math.round(p*100)/100.0 + " ja n=" + n +
+                "siis on keskväärtus " + Math.round(keskväärtus*100)/100.0 + ", dispersioon " + Math.round(dispersioon*100)/100.0 +
+                " ja standardhälve " + Math.round(dispersioon*100)/100.0 + ".");
+    }
+
+    @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");
