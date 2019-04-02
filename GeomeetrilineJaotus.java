@@ -2,11 +2,17 @@ import java.util.Scanner;
 
 public class GeomeetrilineJaotus implements Arvutatav {
 
+    private double p;
+
+    public void setP(double p) {
+        this.p = p;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");
-        double p = scan.nextDouble();
+        setP(scan.nextDouble());
 
         double keskväärtus = 1 / p;
         double dispersioon = (1 - p) / p * p;
