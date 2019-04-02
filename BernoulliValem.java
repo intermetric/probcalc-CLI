@@ -18,6 +18,12 @@ public class BernoulliValem implements Arvutatav {
         this.p = p;
     }
 
+    public BernoulliValem(int k, int n, double p) {
+        this.k = 0;
+        this.n = 0;
+        this.p = 0.0;
+    }
+
     static long kombinatsioonid(int k, int n) {
         long lugeja = 1L;
         long nimetaja = 1L;

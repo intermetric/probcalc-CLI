@@ -13,6 +13,11 @@ public class BinoomJaotus implements Arvutatav {
         this.p = p;
     }
 
+    public BinoomJaotus() {
+        this.n = 0;
+        this.p = 0.0;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);

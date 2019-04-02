@@ -8,6 +8,10 @@ public class GeomeetrilineJaotus implements Arvutatav {
         this.p = p;
     }
 
+    public GeomeetrilineJaotus() {
+        this.p = 0.0;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);

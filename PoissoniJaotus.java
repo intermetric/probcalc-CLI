@@ -8,6 +8,10 @@ public class PoissoniJaotus implements Arvutatav {
         this.lambda = lambda;
     }
 
+    public PoissoniJaotus() {
+        this.lambda = 0;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
