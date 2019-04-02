@@ -2,6 +2,22 @@ import java.util.Scanner;
 
 public class BernoulliValem implements Arvutatav {
 
+    private int k;
+    private int n;
+    private double p;
+
+    public void setK(int k) {
+        this.k = k;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    public void setP(double p) {
+        this.p = p;
+    }
+
     static long kombinatsioonid(int k, int n) {
         long lugeja = 1L;
         long nimetaja = 1L;
@@ -27,11 +43,11 @@ public class BernoulliValem implements Arvutatav {
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");
-        double p = scan.nextDouble();
+        setP(scan.nextDouble());
         System.out.println("Sisesta n (kõikide katsete koguarv)");
-        int n = scan.nextInt();
+        setN(scan.nextInt());
         System.out.println("Sisesta k (see arv, mitmel korral sündmus toimub)");
-        int k = scan.nextInt();
+        setK(scan.nextInt());
         double tõenäosus = kombinatsioonid(k, n) * Math.pow(p, k) * Math.pow((1 - p), (n - k));
         System.out.println("Igal katsel tõenäosusega " + p + " toimuva sündmuse puhul tõenäosus, et " + n + "-st katsest" +
                 " sündmus toimub " + k + " katsel, on: " + Math.round(tõenäosus * 1000) / 1000.0);
