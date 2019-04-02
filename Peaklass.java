@@ -1,13 +1,18 @@
+import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Peaklass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Scanner scan = new Scanner(System.in);
 
         int sisestus = 0;
+
         while (sisestus != 8) {
+            if (sisestus != 0) {
+                TimeUnit.SECONDS.sleep(2);
+            }
             System.out.println("Kui soovid kasutada Bernoulli valemit - sisesta '1' \n                   " +
                     " Multinoomvalemit - sisesta '2' \n                    Hüpergeomeetrilist valemit - sisesta '3' " +
                     " \n                    Bernoulli jaotust - sisesta '4' \n                    " +
