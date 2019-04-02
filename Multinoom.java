@@ -58,5 +58,4 @@ public class Multinoom implements Arvutatav {
         System.out.println("Igal katsel tõenäosusega " + p + " toimuva sündmuse puhul tõenäosus, et " + n + "-st katsest" +
                 " sündmus toimub " + k + " katsel, on: " + Math.round(tõenäosus * 1000) / 1000.0);
     }
-
 }

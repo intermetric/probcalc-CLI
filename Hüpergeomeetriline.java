@@ -59,4 +59,3 @@ public class Hüpergeomeetriline implements Arvutatav {
                 " sündmus toimub " + k + " katsel, on: " + Math.round(tõenäosus * 1000) / 1000.0);
     }
 }
-
