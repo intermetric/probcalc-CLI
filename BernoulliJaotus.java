@@ -2,11 +2,17 @@ import java.util.Scanner;
 
 public class BernoulliJaotus implements Arvutatav {
 
+    private double p;
+
+    public void setP(double p) {
+        this.p = p;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");
-        double p = scan.nextDouble();
+        setP(scan.nextDouble());
 
         double keskväärtus = p;
         double dispersioon = p * (1 - p);

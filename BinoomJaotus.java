@@ -2,13 +2,24 @@ import java.util.Scanner;
 
 public class BinoomJaotus implements Arvutatav {
 
+    private int n;
+    private double p;
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    public void setP(double p) {
+        this.p = p;
+    }
+
     @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta p (vaadeldava sündmuse toimumise tõenäosus, mis on igal katsel sama)");
-        double p = scan.nextDouble();
+        setP(scan.nextDouble());
         System.out.println("Sisesta n (kõikide katsete koguarv)");
-        int n = scan.nextInt();
+        setN(scan.nextInt());
 
         double keskväärtus = n * p;
         double dispersioon = (n * p) * (1 - p);
