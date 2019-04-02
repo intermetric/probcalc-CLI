@@ -18,7 +18,7 @@ public class BernoulliValem implements Arvutatav {
         this.p = p;
     }
 
-    public BernoulliValem(int k, int n, double p) {
+    public BernoulliValem() {
         this.k = 0;
         this.n = 0;
         this.p = 0.0;
