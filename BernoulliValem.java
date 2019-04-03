@@ -38,7 +38,6 @@ public class BernoulliValem implements Arvutatav {
             for (int i = n - k + 1; i < n + 1; i++) {
                 lugeja *= i;
             }
-            System.out.println();
             for (int i = 1; i < k + 1; i++) {
                 nimetaja *= i;
             }
@@ -53,8 +52,8 @@ public class BernoulliValem implements Arvutatav {
         setK((int) Math.round(Math.random() * n));
         double tõenäosus = kombinatsioonid(k, n) * Math.pow(p, k) * Math.pow((1 - p), (n - k));
 
-        System.out.println("Näide:\nKui toimub n=" + n + " katset, kus mingi sündmuse toimumise tõenäosus igal katsel on p=" + Math.round(p*100)/100.0 +
-                " siis tõenäosus, et sündmus toimub täpselt k=" + k + " katsel, on P=" + Math.round(tõenäosus*100)/100.0);
+        System.out.println("Näide:\nKui toimub n=" + n + " katset, kus mingi sündmuse toimumise tõenäosus igal katsel on p=" + Math.round(p * 100) / 100.0 +
+                ", siis tõenäosus, et sündmus toimub täpselt k=" + k + " katsel, on P=" + (Math.round(tõenäosus * 100) / 100.0) + "\n");
     }
 
     public void arvuta() {
@@ -67,7 +66,7 @@ public class BernoulliValem implements Arvutatav {
         setK(scan.nextInt());
         double tõenäosus = kombinatsioonid(k, n) * Math.pow(p, k) * Math.pow((1 - p), (n - k));
         System.out.println("Igal katsel tõenäosusega " + p + " toimuva sündmuse puhul tõenäosus, et " + n + "-st katsest" +
-                " sündmus toimub " + k + " katsel, on: " + Math.round(tõenäosus * 1000) / 1000.0);
+                " sündmus toimub " + k + " katsel, on: " + (Math.round(tõenäosus * 1000) / 1000.0) + "\n");
     }
 
 }
