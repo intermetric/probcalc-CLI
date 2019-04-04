@@ -14,7 +14,6 @@ public class PoissoniJaotus implements Arvutatav {
         this.lambda = 0;
     }
 
-
     //Väljastame kasutajale näite tema sisestuse põhjal:
     @Override
     public void näide(){
