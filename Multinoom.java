@@ -8,6 +8,7 @@ public class Multinoom implements Arvutatav {
     private int n;
     private int m;
 
+    //Setterid:
     public void setN(int n) {
         this.n = n;
     }
@@ -16,11 +17,13 @@ public class Multinoom implements Arvutatav {
         this.m = m;
     }
 
+    //Parameetriteta konstruktorid:
     public Multinoom() {
         this.n = 0;
         this.m = 0;
     }
 
+    //Väljastame kasutajale näite tema sisestuse põhjal:
     @Override
     public void näide() {
         setM((int) Math.round(2 + Math.random() * 3));
@@ -66,6 +69,8 @@ public class Multinoom implements Arvutatav {
         System.out.println("]\ntoimuvad vastavalt " + Arrays.toString(k) + " korda, on: " + (Math.round(tõenäosus * 100000.0) / 100000.0) + ".\n");
     }
 
+    //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
+    @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta m (katsel toimuvate võimalike sündmuste koguarv)");
