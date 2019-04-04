@@ -8,6 +8,7 @@ public class Multinoom implements Arvutatav {
     private int n;
     private int m;
 
+    //Setterid:
     public void setN(int n) {
         this.n = n;
     }
@@ -16,11 +17,13 @@ public class Multinoom implements Arvutatav {
         this.m = m;
     }
 
+    //Parameetriteta konstruktor:
     public Multinoom() {
         this.n = 0;
         this.m = 0;
     }
 
+    //Väljastame kasutajale näite tema sisestuse põhjal:
     @Override
     public void näide() {
         setM((int) Math.round(2 + Math.random() * 3));
@@ -63,9 +66,12 @@ public class Multinoom implements Arvutatav {
         for (int i = 1; i < m; i++) {
             System.out.print(", " + Math.round(tõenäosused[i] * 1000.0) / 1000.0);
         }
-        System.out.println("]\ntoimuvad vastavalt " + Arrays.toString(k) + " korda, on: " + (Math.round(tõenäosus * 100000.0) / 100000.0) + "\n");
+        System.out.println("]\ntoimuvad vastavalt " + Arrays.toString(k) + " korda, on: "
+                + (Math.round(tõenäosus * 100000.0) / 100000.0) + "." + "\n");
     }
 
+    //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
+    @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta m (katsel toimuvate võimalike sündmuste koguarv)");
@@ -100,17 +106,18 @@ public class Multinoom implements Arvutatav {
         for (int i = 0; i < m; i++) {
             tõenäosus *= Math.pow(tõenäosused[i], k[i]);
         }
-        System.out.print("Näide:\nTõenäosus, et " + n + " sõltumatus katses sündmused C(1), C(2)");
+        System.out.print("Tõenäosus, et " + n + " sõltumatus katses sündmused C(1), C(2)");
         if (m == 3){
             System.out.print(", C(3)");
         }
         if (m > 3){
             System.out.print(", ..., C(" + m + ")");
         }
-        System.out.print(", mille tõenäosused on vastavalt [" + (Math.round(tõenäosused[0] * 1000.0) / 1000.0));
+        System.out.print(", mille tõenäosused on vastavalt [" + Math.round(tõenäosused[0] * 1000.0) / 1000.0);
         for (int i = 1; i < m; i++) {
             System.out.print(", " + Math.round(tõenäosused[i] * 1000.0) / 1000.0);
         }
-        System.out.println("]\ntoimuvad vastavalt " + Arrays.toString(k) + " korda, on: " + (Math.round(tõenäosus * 100000.0) / 100000.0));
+        System.out.println("]\ntoimuvad vastavalt " + Arrays.toString(k) + " korda, on: "
+                + Math.round(tõenäosus * 100000.0) / 100000.0 + "." + "\n");
     }
 }
