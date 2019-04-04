@@ -7,6 +7,7 @@ public class Hüpergeomeetriline implements Arvutatav {
     private int m;
     private int väikeN;
 
+    //Setterid:
     public void setSuurN(int suurN) {
         this.suurN = suurN;
     }
@@ -19,12 +20,14 @@ public class Hüpergeomeetriline implements Arvutatav {
         this.väikeN = väikeN;
     }
 
+    //Parameetriteta konstruktor:
     public Hüpergeomeetriline() {
         this.suurN = 0;
         this.m = 0;
         this.väikeN = 0;
     }
 
+    //Kombinatsioonide valem:
     static long kombinatsioonid(int k, int n) {
         long lugeja = 1L;
         long nimetaja = 1L;
@@ -46,6 +49,7 @@ public class Hüpergeomeetriline implements Arvutatav {
         return lugeja / nimetaja;
     }
 
+    //Väljastame kasutajale näite tema sisestuse põhjal:
     @Override
     public void näide() {
         setM((int) Math.round(2 + Math.random() * 3));
@@ -65,11 +69,14 @@ public class Hüpergeomeetriline implements Arvutatav {
         setVäikeN(kSumma);
         long nimetaja = kombinatsioonid(väikeN, suurN);
         double tõenäosus = (double) lugeja / (double) nimetaja;
-        System.out.println("Näide:\nKui " + suurN + " objekti on jagatud " + m + " klassi järgmiselt:\n" + Arrays.toString(klassid) + "\n" +
-                "siis " + väikeN + " objekti valimisel on tõenäosus, et klassidest valitakse vastavalt\n" + Arrays.toString(k) + "\nobjekti," +
-                " P=" + (Math.round(tõenäosus * 1000) / 1000.0) + "\n");
+        System.out.println("Näide:\nKui " + suurN + " objekti on jagatud " + m + " klassi järgmiselt:\n" +
+                Arrays.toString(klassid) + "," + "\n" +
+                "siis " + väikeN + " objekti valimisel on tõenäosus, et klassidest valitakse vastavalt\n"
+                + Arrays.toString(k) + "\nobjekti, P=" + Math.round(tõenäosus * 1000.0) / 1000.0 + "." + "\n");
     }
 
+    //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
+    @Override
     public void arvuta() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Sisesta m (klasside koguarv)");
@@ -92,7 +99,9 @@ public class Hüpergeomeetriline implements Arvutatav {
         setVäikeN(kSumma);
         long nimetaja = kombinatsioonid(väikeN, suurN);
         double tõenäosus = (double) lugeja / (double) nimetaja;
-        System.out.println("Tõenäosus, et " + suurN + "-st objektist, mis on jaotatud " + m + " klassi järgmiselt:\n" + Arrays.toString(klassid) + "\n" +
-                väikeN + " objekti valimisel saadakse klassidest vastavalt\n" + Arrays.toString(k) + "\nobjekti, on: " + (Math.round(tõenäosus * 1000) / 1000.0) + "\n");
+        System.out.println("Tõenäosus, et " + suurN + "-st objektist, mis on jaotatud " + m + " klassi järgmiselt:\n"
+                + Arrays.toString(klassid) + "\n" +
+                väikeN + " objekti valimisel saadakse klassidest vastavalt\n" + Arrays.toString(k) + "\nobjekti, on: "
+                + Math.round(tõenäosus * 1000.0) / 1000.0 + "." + "\n");
     }
 }

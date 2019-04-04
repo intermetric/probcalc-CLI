@@ -5,8 +5,12 @@ public class Peaklass {
 
     public static void main(String[] args) throws Exception {
 
+        System.out.println("Tere! Mina olen tõenäosusteooria valemite kalkulaator.\n---------------------------------" +
+                "---------------------");
+
         Scanner scan = new Scanner(System.in);
 
+        //Kasutaja sisestus omandab vaikimisi väärtuse "0", et seda oleks võimalik hakata tsükli siseselt kasutama:
         int sisestus = 0;
 
         while (sisestus != 8) {
@@ -17,9 +21,11 @@ public class Peaklass {
                     " Multinoomvalemit - sisesta '2' \n                    Hüpergeomeetrilist valemit - sisesta '3' " +
                     " \n                    Bernoulli jaotust - sisesta '4' \n                    " +
                     "Binoomjaotust - sisesta '5' \n                    Geomeetrilist jaotust - sisesta '6' \n " +
-                    "                   Poissoni jaotust - sisesta '7'.\n                    Väljumiseks sisesta '8'.");
+                    "                   Poissoni jaotust - sisesta '7'\n                    Väljumiseks sisesta '8'.");
 
             sisestus = scan.nextInt();
+
+            //Vastavalt kasutaja sisestusele, uute isendite loomine ja nende rakendamine:
             if (sisestus == 1) {
                 Arvutatav arvutaja = new BernoulliValem();
                 arvutaja.näide();
