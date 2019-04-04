@@ -26,7 +26,7 @@ public class GeomeetrilineJaotus implements Arvutatav {
         System.out.println("Näide:\nKui juhuslik suurus X on geomeetrilise jaotusega parameetriga p=" +
                 Math.round(p * 100.0) / 100.0 + ", siis on keskväärtus " +
                 Math.round(keskväärtus * 100.0) / 100.0 + ", dispersioon " + Math.round(dispersioon * 100.0) / 100.0 +
-                " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".");
+                " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".\n");
     }
 
     //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
@@ -41,6 +41,6 @@ public class GeomeetrilineJaotus implements Arvutatav {
         double standardhälve = Math.sqrt(dispersioon);
 
         System.out.println("Geomeetrilise jaotuse kohaselt on keskväärtus " + Math.round(keskväärtus * 100.0) / 100.0 + ", dispersioon " +
-                Math.round(dispersioon * 100.0) / 100.0 + " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".");
+                Math.round(dispersioon * 100.0) / 100.0 + " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".\n");
     }
 }

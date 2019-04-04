@@ -27,7 +27,7 @@ public class PoissoniJaotus implements Arvutatav {
         System.out.println("Näide:\nKui juhuslik suurus X on Poissoni jaotusega parameetriga lambda=" + lambda +
                 ", siis on keskväärtus " + Math.round(keskväärtus * 100.0) / 100.0 + ", dispersioon "
                 + Math.round(dispersioon * 100.0) / 100.0 +
-                " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".");
+                " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".\n");
     }
 
     //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
@@ -45,6 +45,6 @@ public class PoissoniJaotus implements Arvutatav {
         double standardhälve = Math.sqrt(dispersioon);
 
         System.out.println("Poissoni jaotuse kohaselt on keskväärtus " + keskväärtus + ", dispersioon " +
-                dispersioon + " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".");
+                dispersioon + " ja standardhälve " + Math.round(standardhälve * 100.0) / 100.0 + ".\n");
     }
 }

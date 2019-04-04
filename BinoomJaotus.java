@@ -33,7 +33,7 @@ public class BinoomJaotus implements Arvutatav {
                 Math.round(p * 100.0)/100.0 + " ja n=" + n + ", siis on keskväärtus "
                 + Math.round(keskväärtus * 100.0) / 100.0 +
                 ", dispersioon " + Math.round(dispersioon * 100.0) / 100.0 + " ja standardhälve "
-                + Math.round(standardhälve* 100.0) / 100.0 + ".");
+                + Math.round(standardhälve* 100.0) / 100.0 + ".\n");
     }
 
     //Küsime kasutajalt vajalikud andmed ja väljastame soovitud tulemuse:
@@ -51,7 +51,7 @@ public class BinoomJaotus implements Arvutatav {
 
         System.out.println("Binoomjaotuse kohaselt on keskväärtus " + Math.round(keskväärtus * 100.0) / 100.0
                 + ", dispersioon " + Math.round(dispersioon * 100.0) / 100.0 + " ja standardhälve " +
-                Math.round(standardhälve * 100.0) / 100.0 + ".");
+                Math.round(standardhälve * 100.0) / 100.0 + ".\n");
 
     }
 }
